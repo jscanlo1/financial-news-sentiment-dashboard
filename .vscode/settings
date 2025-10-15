@@ -1,0 +1,29 @@
+{
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.analysis.extraPaths": ["./src"],
+
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "black-formatter.args": ["--line-length", "88"],
+
+  "isort.args": ["--profile", "black"],
+
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.lintOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "autoDocstring.docstringFormat": "google",
+  "autoDocstring.includeName": true,
+  "autoDocstring.includeExtendedSummary": true,
+  "autoDocstring.startOnNewLine": true,
+  "autoDocstring.generateDocstringOnEnter": true
+
+}
