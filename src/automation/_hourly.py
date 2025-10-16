@@ -37,7 +37,7 @@ def run_hourly_pipeline() -> None:
 
     all_headlines: List[Headline] = []
 
-    # 1️⃣ Scrape both Yahoo and Google
+    # 1. Scrape both Yahoo and Google
     # for ticker in tickers:
     #    yahoo_news = _fetch_yahoo_news_headlines([ticker])
     #    google_news = _fetch_google_news_headlines(ticker)
@@ -49,13 +49,13 @@ def run_hourly_pipeline() -> None:
         print(f"[{datetime.now(timezone.utc)}] No new headlines found.")
         return
 
-    # 2️⃣ Analyze sentiment
+    # 2. Analyze sentiment
     analyzed_headlines = analyze_headlines(all_headlines)
 
-    # 3️⃣ Persist raw headlines
+    # 3. Persist raw headlines
     storage.append_headlines(today, analyzed_headlines)
 
-    # 4️⃣ Update and persist running aggregate
+    # 4. Update and persist running aggregate
     current_aggregate = storage.load_current_aggregate()
 
     if current_aggregate.date != today:
