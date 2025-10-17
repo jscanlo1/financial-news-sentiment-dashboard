@@ -13,10 +13,10 @@
             }
         },
         {
-            "name": "Debug Dashboard",
+            "name": "Debug Model Distillation",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/src/app/dashboard.py",
+            "program": "${workspaceFolder}/src/model_building/distill_model.py",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/src",
             "env": {

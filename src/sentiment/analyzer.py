@@ -2,10 +2,12 @@ from transformers import BertForSequenceClassification, BertTokenizer, pipeline
 
 from data_models import Headline
 
-finbert = BertForSequenceClassification.from_pretrained('yiyanghkust/finbert-tone',num_labels=3)
-tokenizer = BertTokenizer.from_pretrained('yiyanghkust/finbert-tone') # type: ignore
+finbert = BertForSequenceClassification.from_pretrained(
+    "yiyanghkust/finbert-tone", num_labels=3
+)
+tokenizer = BertTokenizer.from_pretrained("yiyanghkust/finbert-tone")  # type: ignore
 
-classifier = pipeline("sentiment-analysis", model=finbert, tokenizer=tokenizer) # type: ignore
+classifier = pipeline("sentiment-analysis", model=finbert, tokenizer=tokenizer)  # type: ignore
 
 
 def analyze_headlines(headlines: list[Headline]) -> list[Headline]:

@@ -5,9 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=0.26.0",
     "beautifulsoup4>=4.14.2",
     "boto3>=1.40.47",
-    "pandas>=2.3.3",
     "python-dotenv>=1.1.1",
     "requests>=2.32.5",
     "requests-html>=0.10.0",
@@ -29,6 +29,8 @@ dev = [
     "types-boto3-s3>=1.40.26",
 ]
 model-building = [
+    "datasets>=4.2.0",
+    "pandas>=2.3.3",
     "torch>=2.8.0",
     "torchvision>=0.23.0",
 ]

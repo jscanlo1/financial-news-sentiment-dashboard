@@ -1,8 +1,9 @@
 from datetime import datetime, timedelta, timezone
-from yahoo_fin import news
 from typing import Any
-from data_models import Headline
 
+from yahoo_fin import news
+
+from data_models import Headline
 
 
 def _fetch_yahoo_news_headlines(
