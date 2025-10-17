@@ -54,13 +54,6 @@ tokenized_train_dataset = train_dataset.map(tokenize_fn, batched=True) # type: i
 tokenized_validation_dataset = validation_dataset.map(tokenize_fn, batched=True) # type: ignore
 tokenized_test_dataset = test_dataset.map(tokenize_fn, batched=True) # type: ignore
 
-
-
-#train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
-
-#batch = next(iter(train_loader))
-#print(batch.keys())  # Shows the keys in the batch
-
 # Step 4: Define distillation loss
 def distillation_loss(
     teacher_logits, student_logits, temperature: float = 2.0, alpha: float = 0.5
