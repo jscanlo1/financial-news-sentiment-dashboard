@@ -6,7 +6,6 @@ from pathlib import Path
 from typing import Any, Optional, Union
 
 import torch
-from torch.utils.data import DataLoader
 from datasets import Dataset
 from torch import nn
 from transformers import (
